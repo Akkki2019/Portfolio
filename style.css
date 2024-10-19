@@ -8,7 +8,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #fff;
-    background-color: #000; /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-blend-mode: overlay;
     background-image: url('/home/akash/Projects/Portfolio/d_viz.gif');
     background-size: cover;
     background-position: center;
@@ -42,13 +43,13 @@ nav ul li a {
 }
 
 main {
-    background-color: rgba(10, 25, 47, 0.7); /* Reduced opacity for more background visibility */
+    background-color: rgba(10, 25, 47, 0.5); /* Reduced opacity for more background visibility */
     margin-top: 60px;
     padding: 20px;
 }
 
 section {
-    background-color: rgba(10, 25, 47, 0.6); /* Reduced opacity for sections */
+    background-color: rgba(10, 25, 47, 0.4); /* Further reduced opacity for sections */
     margin-bottom: 2rem;
     border-radius: 8px;
     padding: 4rem 2rem;
@@ -87,7 +88,7 @@ h1, h2, h3, p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 25, 47, 0.3); /* Reduced opacity for more background visibility */
+    background: rgba(10, 25, 47, 0.2); /* Reduced opacity for more background visibility */
     z-index: 2;
 }
 
@@ -239,6 +240,6 @@ body::after {
     left: 0;
     right: 0;
     height: 200px;
-    background: linear-gradient(to top, rgba(10, 25, 47, 1), rgba(10, 25, 47, 0));
+    background: linear-gradient(to top, rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0));
     pointer-events: none;
 }
