@@ -8,8 +8,6 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    background-blend-mode: overlay;
     background-image: url('/home/akash/Projects/Portfolio/d_viz.gif');
     background-size: cover;
     background-position: center;
@@ -43,13 +41,13 @@ nav ul li a {
 }
 
 main {
-    background-color: rgba(10, 25, 47, 0.5); /* Reduced opacity for more background visibility */
+    background-color: rgba(10, 25, 47, 0.3); /* Reduced opacity for more background visibility */
     margin-top: 60px;
     padding: 20px;
 }
 
 section {
-    background-color: rgba(10, 25, 47, 0.4); /* Further reduced opacity for sections */
+    background-color: rgba(10, 25, 47, 0.2); /* Further reduced opacity for sections */
     margin-bottom: 2rem;
     border-radius: 8px;
     padding: 4rem 2rem;
@@ -63,8 +61,12 @@ h1, h2, h3, p {
 #hero {
     position: relative;
     color: #fff;
-    text-align: left;
+    text-align: center;
     padding: 8rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -74,10 +76,11 @@ h1, h2, h3, p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/home/akash/Projects/Portfolio/d1.jpg'); /* Updated image name */
-    background-size: cover;
+    /* background-image: url('/home/akash/Projects/Portfolio/d_norm.gif'); */
+    background-size: contain;
     background-position: center;
-    opacity: 0.8; /* Adjust this value as needed */
+    background-repeat: no-repeat;
+    opacity: 1; /* Full opacity */
     z-index: 1;
 }
 
@@ -95,32 +98,42 @@ h1, h2, h3, p {
 .hero-content {
     position: relative;
     z-index: 3;
+    text-align: center;
+    padding: 2rem;
+    background-color: transparent; /* Remove the background color */
 }
 
-#hero h1 {
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    color: #fff; /* Ensure text is white for visibility */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Add shadow for better readability */
+}
+
+.hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-#hero h2 {
+.hero-content h2 {
     font-size: 1.8rem;
     color: #64ffda; /* Light teal color for subtitle */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    margin-bottom: 1rem;
 }
 
-#hero p {
+.hero-content p {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-#hero a {
+.hero-content a {
     color: #64ffda;
     text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-#hero a:hover {
+.hero-content a:hover {
     color: #4cccb0;
 }
 
@@ -140,7 +153,7 @@ h1, h2, h3, p {
 }
 
 .project, .job {
-    background-color: rgba(255, 255, 255, 0.1); /* Very light background for projects and jobs */
+    background-color: rgba(255, 255, 255, 0.05); /* Very light background for projects and jobs */
     padding: 1.5rem;
     margin-bottom: 2rem;
     border-radius: 8px;
@@ -240,6 +253,7 @@ body::after {
     left: 0;
     right: 0;
     height: 200px;
-    background: linear-gradient(to top, rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0));
+    background: linear-gradient(to top, rgba(10, 25, 47, 0.3), rgba(10, 25, 47, 0));
     pointer-events: none;
 }
+
